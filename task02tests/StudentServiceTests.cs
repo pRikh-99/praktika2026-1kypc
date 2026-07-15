@@ -14,9 +14,9 @@ public class StudentServiceTests
     {
         _testStudents = new List<Student>
         {
-            new() { Name = "Иван", Faculty = "ФИТ", Grades = new List<int> { 5, 4, 5 } },
-            new() { Name = "Анна", Faculty = "ФИТ", Grades = new List<int> { 3, 4, 3 } },
-            new() { Name = "Петр", Faculty = "Экономика", Grades = new List<int> { 5, 5, 5 } }
+            new() { Name = "Иван", Faculty = "ФИТ", Grades = new List<int> { 5, 4, 5 } }, // Средний: 4.66
+            new() { Name = "Анна", Faculty = "ФИТ", Grades = new List<int> { 3, 4, 3 } }, // Средний: 3.33
+            new() { Name = "Петр", Faculty = "Экономика", Grades = new List<int> { 5, 5, 5 } } // Средний: 5.0
         };
         _service = new StudentService(_testStudents);
     }
@@ -59,11 +59,11 @@ public class StudentServiceTests
     public void GroupStudentsByFaculty_GroupsCorrectly()
     {
         var lookup = _service.GroupStudentsByFaculty();
-
         Assert.True(lookup.Contains("ФИТ"));
         Assert.True(lookup.Contains("Экономика"));
         Assert.Equal(2, lookup["ФИТ"].Count());
         Assert.Single(lookup["Экономика"]);
     }
 }
+
 
