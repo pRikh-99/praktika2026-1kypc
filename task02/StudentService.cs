@@ -1,7 +1,3 @@
-﻿namespace task02;
-
-public class StudentService
-{
     using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -34,6 +30,4 @@ public class StudentService
             .OrderByDescending(f => f.Avg)
             .Select(f => f.Faculty)
             .FirstOrDefault() ?? string.Empty;
-}
-
 }
