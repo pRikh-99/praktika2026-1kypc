@@ -19,8 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\task08\CommandLib\CommandLib.csproj" />
-    <ProjectReference Include="..\task08\FileSystemCommands\FileSystemCommands.csproj" />
+    <ProjectReference Include="..\FileSystemCommands\FileSystemCommands.csproj" />
   </ItemGroup>
 
 </Project>

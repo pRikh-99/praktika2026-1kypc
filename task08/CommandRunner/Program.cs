@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.IO;
 using System.Reflection;
 using CommandLib;
@@ -22,7 +22,7 @@ internal class Program
 
         if (!File.Exists(dllPath))
         {
-            Console.WriteLine($"[Ошибка] Динамическая библиотека не найдена по пути: {dllPath}");
+            Console.WriteLine($"[Ошибка] Динамическая библиотека не найдена: {dllPath}");
             return;
         }
 
@@ -35,25 +35,19 @@ internal class Program
             if (sizeCmdType != null)
             {
                 object? sizeInstance = Activator.CreateInstance(sizeCmdType, targetDir);
-                if (sizeInstance is ICommand cmd)
-                {
-                    cmd.Execute();
-                }
+                if (sizeInstance is ICommand cmd) cmd.Execute();
             }
 
             Type? findCmdType = assembly.GetType("FileSystemCommands.FindFilesCommand");
             if (findCmdType != null)
             {
                 object? findInstance = Activator.CreateInstance(findCmdType, targetDir, "*.dll");
-                if (findInstance is ICommand cmd)
-                {
-                    cmd.Execute();
-                }
+                if (findInstance is ICommand cmd) cmd.Execute();
             }
         }
         catch (Exception ex)
         {
-            Console.WriteLine($"Произошла ошибка рефлексии при обработке плагинов: {ex.Message}");
+            Console.WriteLine($"Произошла ошибка рефлексии: {ex.Message}");
         }
     }
 }
