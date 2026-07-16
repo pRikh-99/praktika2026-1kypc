@@ -1,10 +1,11 @@
 <Solution>
   <Project Path="task02/task02.csproj" />
   <Project Path="task02tests/task02tests.csproj" />
-  <Project Path="AssemblyAnalyzer/AssemblyAnalyzer.csproj" />
-  <Project Path="CommandLib/CommandLib.csproj" />
-  <Project Path="CommandRunner/CommandRunner.csproj" />
-  <Project Path="FileSystemCommands/FileSystemCommands.csproj" />
+  <Folder Name="/task08/">
+    <Project Path="task08/CommandLib/CommandLib.csproj" />
+    <Project Path="task08/CommandRunner/CommandRunner.csproj" />
+    <Project Path="task08/FileSystemCommands/FileSystemCommands.csproj" />
+  </Folder>
   <Project Path="task01/task01.csproj" />
   <Project Path="task01tests/task01tests.csproj" />
   <Project Path="task03/task03.csproj" />

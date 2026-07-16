@@ -12,7 +12,6 @@ public class FileSystemCommandsTests
     {
         var testDir = Path.Combine(Path.GetTempPath(), "TestDir_" + Guid.NewGuid());
         Directory.CreateDirectory(testDir);
-
         File.WriteAllText(Path.Combine(testDir, "test1.txt"), "Hello");
         File.WriteAllText(Path.Combine(testDir, "test2.txt"), "World");
 
