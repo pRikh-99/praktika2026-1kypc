@@ -18,4 +18,6 @@
   <Project Path="task07tests/task07tests.csproj" />
   <Project Path="task08tests/task08tests.csproj" />
   <Project Path="task09tests/task09tests.csproj" />
+  <Project Path="task10/task10.csproj" />
+  <Project Path="task10tests/task10tests.csproj" />
 </Solution>
